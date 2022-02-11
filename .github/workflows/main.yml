@@ -45,6 +45,6 @@ jobs:
           name: artifact
           path: downloads
       - name: Deploy with rsync
-        run: rsync -avz artifact ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/ubuntu/  
+        run: rsync -avz downloads/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/ubuntu/  
           
       
